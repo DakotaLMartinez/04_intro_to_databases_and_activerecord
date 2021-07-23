@@ -1,44 +1,124 @@
-# IntroToDatabasesAndActiverecord
+# Intro to Databases & ActiveRecord
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/intro_to_databases_and_activerecord`. To experiment with that code, run `bin/console` for an interactive prompt.
+### Learning Goals:
+- [] Explain persistence, the need for using SQL, and difference between SQLite3 and SQL
+  * Install the [Sqlite extension for VSCode](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite). It's a good resource for navigating through your DB right within VSCode.
+  * You can also explore provided data through [DB Browser for SQLite](https://sqlitebrowser.org/dl/)
+- [] Perform CRUD actions on a single table
+- [] Explore how to interact with a sqlite3 database with a ruby file
+- [] Perform CRUD actions using ActiveRecord
 
-TODO: Delete this and the text above, and describe your gem
+---
 
-## Installation
+## Important Resources for Today
+- [RailsGuides on ActiveRecord](https://guides.rubyonrails.org/v5.2/active_record_basics.html)
+- [RailsGuides on ActiveRecord Migrations](https://guides.rubyonrails.org/v5.2/active_record_migrations.html)
+- [RailsGuides for ActiveRecord Query Interface](https://guides.rubyonrails.org/v5.2/active_record_querying.html)
+- [Rails documentation (section on ActiveRecord)](https://api.rubyonrails.org/v5.2.6/)
+- [Sqlite tutorial](https://www.sqlitetutorial.net/)
+- [Sqlite Cheatsheet]((https://www.sqlitetutorial.net/sqlite-cheat-sheet/))
+- [VSCode Sqlite Extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
 
-Add this line to your application's Gemfile:
+## Topics
 
-```ruby
-gem 'intro_to_databases_and_activerecord'
+### What are the benefits of having a database for our application? 
+
+...
+### What is SQL and what do we use it for?
+
+...
+### Why have a separate language for interacting with the database? Why not use Ruby or JavaScript?
+
+...
+### What's the difference between SQLite and SQL?
+
+...
+### What is an RDBMS?
+
+...
+## Demonstration
+
+- Create Dogs model and table
+- open up `./bin/console` and do create a couple of dogs.
+
+## Task 1
+
+1. Create a `computers` table with the following columns:
+
+- brand (string)
+- model (string)
+- screen_size (float)
+- model_year (integer)
+- asleep (boolean)
+- last_background (datetime)
+
+2. In `lib/computer.rb`, create a `Computer` class that inherits from `ActiveRecord::Base` 
+
+3. In `lib/exercises.rb` fill in the `first_computer` and `second_computer` methods so that they both return computers with `brand`, `model`, `screen_size` and `model_year` properties assigned.
+
+### How did you create the computers table? 
+
+...
+
+### Why do we write database changes to a file instead of using SQL to update the structure of the database?
+
+...
+### How is the Computer class connected to the computers table?
+
+...
+
+### Why do migration file names start with a number?
+
+...
+
+### What else is important about migration file names?
+
+...
+
+### What is an ORM and why do we need/want one?
+
+...
+
+### What is rake and what is it used for?
+
+## Demonstration - Updating and Deleting Dogs
+
+For this, let's open up `./bin/console` and attempt the following:
+### Find an existing `dog` 
+
+```rb
+```
+### Update the dog's age
+
+```rb
+```
+### Delete the dog
+
+```rb
+```
+### Try to find the dog again to demonstrate it has been deleted
+
+```rb
 ```
 
-And then execute:
 
-    $ bundle install
+## Task 2
 
-Or install it yourself as:
+1. Define a `back_up` method within the computer class that updates the `last_backed_up_at` attribute of the computer to the current date and time.
 
-    $ gem install intro_to_databases_and_activerecord
+2. Define a `sleep` method within the computer class that updates the `asleep` attribute of the computer to `true`.
 
-## Usage
+3. Define a `wake_up` method within the computer class that updates the `asleep` attribute of the computer to `false`.
 
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/DakotaLMartinez/intro_to_databases_and_activerecord. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/DakotaLMartinez/intro_to_databases_and_activerecord/blob/master/CODE_OF_CONDUCT.md).
+4. Define a `backed_up` method within the computer class that returns all of the computers that have been backed_up.
 
 
-## License
+### What is the main purpose of ActiveRecord in our application?
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+...
+### What would we have to do in our application if we didn't have something like ActiveRecord?
 
-## Code of Conduct
+...
+### What are some potential downsides of using ActiveRecord?
 
-Everyone interacting in the IntroToDatabasesAndActiverecord project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/DakotaLMartinez/intro_to_databases_and_activerecord/blob/master/CODE_OF_CONDUCT.md).
+...

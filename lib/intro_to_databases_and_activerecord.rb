@@ -1,6 +1,14 @@
-require "intro_to_databases_and_activerecord/version"
+require "sinatra/activerecord"
+require "require_all"
+require "pry"
 
-module IntroToDatabasesAndActiverecord
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
+ActiveRecord::Base.establish_connection(
+  adapter: "sqlite3",
+  database: "db/intro_to_databases_and_activerecord.sqlite"
+)
+ActiveRecord::Base.default_timezone = :utc
+Time.zone = "UTC"
+
+require_all "lib/intro_to_databases_and_activerecord"
+
