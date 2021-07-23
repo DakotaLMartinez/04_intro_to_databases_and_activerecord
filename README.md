@@ -16,7 +16,7 @@
 - [RailsGuides for ActiveRecord Query Interface](https://guides.rubyonrails.org/v5.2/active_record_querying.html)
 - [Rails documentation (section on ActiveRecord)](https://api.rubyonrails.org/v5.2.6/)
 - [Sqlite tutorial](https://www.sqlitetutorial.net/)
-- [Sqlite Cheatsheet]((https://www.sqlitetutorial.net/sqlite-cheat-sheet/))
+- [Sqlite Cheatsheet](https://www.sqlitetutorial.net/sqlite-cheat-sheet/)
 - [VSCode Sqlite Extension](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
 
 ## Topics
