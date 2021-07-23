@@ -56,30 +56,31 @@
 
 3. In `lib/exercises.rb` fill in the `first_computer` and `second_computer` methods so that they both return computers with `brand`, `model`, `screen_size` and `model_year` properties assigned.
 
-### How did you create the computers table? 
+### Discussion Questions
+#### How did you create the computers table? 
 
 ...
 
-### Why do we write database changes to a file instead of using SQL to update the structure of the database?
+#### Why do we write database changes to a file instead of using SQL to update the structure of the database?
 
 ...
-### How is the Computer class connected to the computers table?
-
-...
-
-### Why do migration file names start with a number?
+#### How is the Computer class connected to the computers table?
 
 ...
 
-### What else is important about migration file names?
+#### Why do migration file names start with a number?
 
 ...
 
-### What is an ORM and why do we need/want one?
+#### What else is important about migration file names?
 
 ...
 
-### What is rake and what is it used for?
+#### What is an ORM and why do we need/want one?
+
+...
+
+#### What is rake and what is it used for?
 
 ## Demonstration - Updating and Deleting Dogs
 
