@@ -50,7 +50,7 @@
 - screen_size (float)
 - model_year (integer)
 - asleep (boolean)
-- last_background (datetime)
+- last_backed_up_at (datetime)
 
 2. In `lib/computer.rb`, create a `Computer` class that inherits from `ActiveRecord::Base` 
 
