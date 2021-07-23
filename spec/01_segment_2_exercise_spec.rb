@@ -27,7 +27,7 @@ RSpec.describe "Segment 2 - Exercise" do
         expect(first_computer).to be_a(Computer)
         expect(first_computer.brand).to be_a(String)
         expect(first_computer.screen_size).to be_a(Float)
-        expect(first_computer.model_name).to be_a(String)
+        expect(first_computer.model).to be_a(String)
         expect(first_computer.model_year).to be_an(Integer)
       end
     end
@@ -37,7 +37,7 @@ RSpec.describe "Segment 2 - Exercise" do
         expect(second_computer).to be_a(Computer)
         expect(second_computer.brand).to be_a(String)
         expect(first_computer.screen_size).to be_a(Float)
-        expect(second_computer.model_name).to be_a(String)
+        expect(second_computer.model).to be_a(String)
         expect(second_computer.model_year).to be_an(Integer)
       end
     end
